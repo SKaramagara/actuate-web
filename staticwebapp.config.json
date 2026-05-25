@@ -1,11 +1,7 @@
 {
   "routes": [
     {
-      "route": "/tr",
-      "rewrite": "/tr/index.html"
-    },
-    {
-      "route": "/tr/",
+      "route": "/tr/*",
       "rewrite": "/tr/index.html"
     },
     {
