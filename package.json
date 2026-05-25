@@ -1,0 +1,11 @@
+{
+  "name": "actuate-api",
+  "version": "1.0.0",
+  "description": "Actuate contact form API",
+  "main": "contact/index.js",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@azure/communication-email": "^1.0.0",
+    "@azure/data-tables": "^13.2.2"
+  }
+}
