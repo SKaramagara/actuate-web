@@ -72,7 +72,7 @@ module.exports = async function (context, req) {
     const emailClient = new EmailClient(process.env.ACS_CONNECTION_STRING);
 
     const poller = await emailClient.beginSend({
-      senderAddress: "no-reply@actuate.com.tr",
+      senderAddress: "donotreply@actuate.com.tr",
       recipients: {
         to: [{ address: "info@actuate.com.tr", displayName: "Actuate" }]
       },
