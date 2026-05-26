@@ -1873,9 +1873,9 @@ footer { position: relative; z-index: 1; padding: 30px 60px; border-top: 1px sol
         message:message,
         timestamp:new Date().toISOString()
       };
-      fetch('/api/contact',{
+      fetch('https://formspree.io/f/mpqnyenp',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
         body:JSON.stringify(payload)
       }).then(function(r){return r.ok?Promise.resolve():Promise.reject(r.status);})
       .catch(function(e){
