@@ -93,7 +93,7 @@ svg.arrow{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none;fl
 .sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--pl),transparent);z-index:3;opacity:0;transition:opacity 0.3s}
 .sc:hover{border-color:rgba(155,127,232,0.4);transform:translateY(-4px);box-shadow:0 8px 20px rgba(68,0,153,0.15);background:#161628}
 .sc:hover::before{opacity:1}
-.sc-photo{width:100%;height:320px;background-size:contain;background-position:center;background-repeat:no-repeat;position:relative;flex-shrink:0;filter:brightness(0.85) saturate(1.05);transition:filter 0.35s,transform 0.3s;order:1;border-radius:0}
+.sc-photo{width:100%;height:320px;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;flex-shrink:0;filter:brightness(0.85) saturate(1.05);transition:filter 0.35s,transform 0.3s;order:1;border-radius:0}
 .sc-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(22,22,40,0.5) 100%);transition:background 0.35s}
 .sc:hover .sc-photo{filter:brightness(0.95) saturate(1.15);transform:scale(1.02)}
 .sc:hover .sc-photo::after{background:linear-gradient(to bottom,transparent 50%,rgba(22,22,40,0.3) 100%)}
@@ -284,7 +284,7 @@ footer{position:relative;z-index:1;padding:30px 60px;border-top:1px solid var(--
   .about-badge{right:0}
   .btn-primary,.btn-orange,.btn-outline{min-height:48px}
   .sectors-grid,.sectors-row2{grid-template-columns:1fr}
-  .sc-photo{width:36%;min-height:160px}
+  .sc-photo{width:100%;height:200px}
   .page-hero .container{grid-template-columns:1fr!important;gap:0!important}
   .page-hero svg{max-height:200px}
   .hero-title{font-size:1.8rem;line-height:1.15}
