@@ -1505,6 +1505,7 @@ footer { position: relative; z-index: 1; padding: 30px 60px; border-top: 1px sol
     <div class="pill pill-solid-orange" style="bottom:160px;left:-300px;z-index:0"></div>
     <div class="contact-wrap">
       <form class="contact-form" id="contactForm" novalidate>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px">
         <div class="form-row">
           <div class="form-group"><label for="fname">Ad *</label><input type="text" id="fname" placeholder="İsim" required autocomplete="given-name"></div>
           <div class="form-group"><label for="lname">Soyadı *</label><input type="text" id="lname" placeholder="Soyisim" required autocomplete="family-name"></div>
@@ -1860,6 +1861,8 @@ footer { position: relative; z-index: 1; padding: 30px 60px; border-top: 1px sol
       var lname=document.getElementById('lname').value.trim();
       var email=document.getElementById('email').value.trim();
       var message=document.getElementById('message').value.trim();
+      var website=document.getElementById('website').value.trim();
+      if(website)return;
       if(!fname||!lname||!email||!message){
         alert('Please fill in all required fields.');
         return;
@@ -1871,7 +1874,8 @@ footer { position: relative; z-index: 1; padding: 30px 60px; border-top: 1px sol
         company:document.getElementById('company').value.trim(),
         sector:document.getElementById('sector').value||'Not specified',
         message:message,
-        timestamp:new Date().toISOString()
+        timestamp:new Date().toISOString(),
+        _gotcha:website
       };
       fetch('https://formspree.io/f/mpqnyenp',{
         method:'POST',
